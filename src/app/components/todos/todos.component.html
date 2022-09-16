@@ -1,0 +1,20 @@
+<form (submit)="onAddItem()" autocomplete="off">
+    <input
+    placeholder="Enter your item..."
+    type="text"
+    id="name"
+    name="name"
+    class="inputField"
+    [(ngModel)]="inputTodo"
+    >
+    <button class="formSubmit" type="submit">Add</button>
+</form>
+<div *ngIf="todoList.length > 0" class="container">
+    <ul class="list-container">
+        <li class="item-container" *ngFor="let todo of todoList; let i = index">
+            <p>{{i + 1}}</p>
+            <p>{{todo.content}}</p>
+            <button class="btn-danger" (click)="onDelete(i)">Remove</button><!---->
+        </li>
+    </ul>
+</div>
