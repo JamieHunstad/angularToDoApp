@@ -14,7 +14,10 @@
         <li class="item-container" *ngFor="let todo of todoList; let i = index">
             <p>{{i + 1}}</p>
             <p>{{todo.content}}</p>
-            <button class="btn-danger" (click)="onDelete(i)">Remove</button><!---->
+            <div class="button-container">
+                <button class="btn-edit" (click)="onEdit(i)">Edit</button>
+                <button class="btn-danger" (click)="onDelete(i)">Remove</button>
+            </div>
         </li>
     </ul>
 </div>

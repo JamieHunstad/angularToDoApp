@@ -20,13 +20,25 @@ export class TodoServiceService {
     return this.todoArray
   }
 
-  addItem(todo: any){
+  addItem(todo: any, itemId: number){
+
+    if (itemId == -1){ 
     this.todoArray.push({
       content: todo
     });
+    }
+    else{
+      this.todoArray[itemId] = {
+        content: todo
+      };
+    }
+
     this.subject.next(this.todoArray)
+
   }
   
+
+
   deleteItem(itemId: number){
     this.todoArray =  this.todoArray.filter(function(todo,todoId){
      return itemId !== todoId

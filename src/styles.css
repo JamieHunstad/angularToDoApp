@@ -14,6 +14,7 @@ body {
 }
 
 .btn-danger{
+    margin: 0 2.5px;
     background-color: rgb(222, 59, 86);
     border: none;
     padding: 10px;
@@ -22,6 +23,19 @@ body {
 }
 .btn-danger:hover{
     background-color: rgb(237, 85, 110);
+    cursor: pointer;
+}
+
+.btn-edit{
+    margin: 0 2.5px;
+    background-color: #f6c832;
+    border: none;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+}
+.btn-edit:hover{
+    background-color: #ffdd6c;
     cursor: pointer;
 }
 
